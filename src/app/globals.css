@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background: hsl(216, 18%, 16%);
+    --background-accent: hsl(217, 10%, 25%);
+    --background-accent: #393e46;
+    --primary: hsl(175, 82%, 80%);
+    --text: hsl(21, 35%, 92%);
+  }
+}
+
+body.body-background {
+  color: var(--text);
+  background: var(--chakra-colors-gray-800);
+
+  p,
+  span {
+    color: var(--text);
+  }
+
+  .title {
+    color: var(--primary);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
