@@ -13,7 +13,7 @@
     --foreground-rgb: 255, 255, 255;
     --background: hsl(216, 18%, 16%);
     --background-accent: hsl(217, 10%, 25%);
-    --background-accent: #393e46;
+    --background-accent--light: hsl(220, 26%, 26%);
     --primary: hsl(175, 82%, 80%);
     --text: hsl(21, 35%, 92%);
   }

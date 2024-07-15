@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function NavBar() {
 	return (
 		<nav className="flex flex-col p-4 gap-2 fixed top-4 right-4">
-			<Link href='#home'>
+			<Link href='#void'>
 				Home
 			</Link>
-			<Link href='#sobre'>
+			<Link href='#projects'>
 				Sobre
 			</Link>
 			<Link href='#contato'>
