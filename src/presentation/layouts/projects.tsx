@@ -1,4 +1,4 @@
-import * as ProjectsData from "@/data/projects.json";
+import ProjectsData from "@/data/projects.json";
 import { Box, Container, Heading, Stack } from "@chakra-ui/react";
 import CardProject from "../components/cardProject";
 
