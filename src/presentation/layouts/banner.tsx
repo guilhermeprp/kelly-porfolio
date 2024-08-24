@@ -6,12 +6,13 @@ export default function Banner() {
 		<Container
 			id="banner"
 			position="relative"
+			zIndex={10}
 			display="flex"
 			maxW="100%"
 			h="90dvh"
 			pb={24}
 		>
-			<Stack w={{ base: "80dvw" }} m="auto">
+			<Stack w={{ base: "80dvw" }} m="auto" className="clip-animation">
 				<Heading as="h1" fontWeight={900} fontFamily="serif" fontSize={{ base: '5xl', sm: '7xl', md: '9xl' }}>
 					Kelly Jenyfer Soares Fernandes
 				</Heading>

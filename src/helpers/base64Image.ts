@@ -13,8 +13,6 @@ export async function getBase64Image(imageUrl: string): Promise<string | undefin
 
 		const { base64 } = await getPlaiceholder(Buffer.from(buffer));
 
-		console.log('base64: ' + base64);
-
 		return base64;
 	} catch (err) {
 		if (err instanceof Error) console.error(err.stack);

@@ -11,7 +11,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background: hsl(216, 18%, 16%);
+    --background: hsl(0, 0%, 12.5%);
     --background-accent: hsl(217, 10%, 25%);
     --background-accent--light: hsl(220, 26%, 26%);
     --primary: hsl(175, 82%, 80%);
@@ -21,7 +21,7 @@
 
 body.body-background {
   color: var(--text);
-  background: var(--chakra-colors-gray-800);
+  background: var(--background);
 
   p,
   span {
@@ -36,5 +36,32 @@ body.body-background {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+
+
+
+/* NEW DATA */
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.clip-animation {
+  :nth-child(1) {
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation-delay: 1s;
+  }
+
+  :nth-child(2) {
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation-delay: 1.5s;
   }
 }
