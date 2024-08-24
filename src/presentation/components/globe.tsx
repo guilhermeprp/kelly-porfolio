@@ -1,20 +1,23 @@
+// @ts-nocheck
+
 "use client"
 
 import { Container } from "@chakra-ui/react"
 import { Html, useGLTF, useProgress } from "@react-three/drei"
-import { Canvas, useFrame, useThree } from "@react-three/fiber"
+import { Canvas, GroupProps, useFrame, useThree } from "@react-three/fiber"
 import React, { Suspense } from "react"
+import { Euler, Group, Object3DEventMap, Vector3 } from "three"
 
 const filePath = '/airports_world.glb';
 
 useGLTF.preload(filePath)
 
 function Loader() {
-	const { progress, active } = useProgress()
+	const { progress, active } = useProgress();
 
 	return (
 		<Html center>
-			<Container pos="absolute" inset={0} zIndex={99} display={active ? "block" : "none"} bg="black">
+			<Container pos="fixed" inset={0} zIndex={99} display={active ? "block" : "none"} bg="black">
 				<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 					<p className="text-2xl font-bold">Loading...</p>
 					<p className="text-2xl font-bold">{progress} %</p>
@@ -36,17 +39,17 @@ export default function Scene() {
 	)
 }
 
-function Model(props) {
+function Model(props: GroupProps) {
 	const { nodes, materials } = useGLTF(filePath);
 	const { viewport } = useThree();
-	const directionalLightRef = React.useRef();
-	const globeRef = React.useRef();
+	const globeRef = React.useRef<Group<Object3DEventMap>>();
 
-	useFrame((state, delta) => {
-		globeRef.current.position.y = window.scrollY / 1500;
-		globeRef.current.rotation.y += (delta / 7);
+	useFrame((_state, delta) => {
+		if (!globeRef.current) return;
+
+		(globeRef.current.position! as Vector3).y = window.scrollY / 1500;
+		(globeRef.current.rotation! as Euler).y += (delta / 7);
 	})
-	console.log("🚀 ~ Model ~ viewport.width:", viewport.width);
 
 	return (
 		<>
