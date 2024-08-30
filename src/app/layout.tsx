@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/presentation/components/navbar";
+import Background from "@/presentation/components/background";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,10 @@ export default function RootLayout({
       <body className="body-background">
         <ChakraProvider>
           <NavBar />
-          {children}
+          <main className="relative z-10 flex min-h-screen flex-col items-center justify-between pt-24 px-0 sm:px-4 md:px-8 lg:px-32">
+            {children}
+            <Background />
+          </main>
         </ChakraProvider>
       </body>
     </html>

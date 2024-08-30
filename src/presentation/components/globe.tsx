@@ -1,42 +1,26 @@
 // @ts-nocheck
+"use client";
 
-"use client"
+import useBannerParallax from "@/hooks/bannerParallax";
+import { useGLTF } from "@react-three/drei";
+import { Canvas, GroupProps, useFrame, useThree } from "@react-three/fiber";
+import React from "react";
+import { Euler, Group, Object3DEventMap, Vector3 } from "three";
 
-import { Container } from "@chakra-ui/react"
-import { Html, useGLTF, useProgress } from "@react-three/drei"
-import { Canvas, GroupProps, useFrame, useThree } from "@react-three/fiber"
-import React, { Suspense } from "react"
-import { Euler, Group, Object3DEventMap, Vector3 } from "three"
+const filePath = "/airports_world.glb";
 
-const filePath = '/airports_world.glb';
-
-useGLTF.preload(filePath)
-
-function Loader() {
-	const { progress, active } = useProgress();
-
-	return (
-		<Html center>
-			<Container pos="fixed" inset={0} zIndex={99} display={active ? "block" : "none"} bg="black">
-				<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-					<p className="text-2xl font-bold">Loading...</p>
-					<p className="text-2xl font-bold">{progress} %</p>
-				</div>
-			</Container>
-		</Html>
-	)
-}
+useGLTF.preload(filePath);
 
 export default function Scene() {
+	const { style: { opacity } } = useBannerParallax();
+
 	return (
-		<div className="absolute inset-0 w-dvw h-dvh z-0 contrast-75 grayscale">
+		<div style={{ opacity: opacity }} className="absolute inset-0 w-dvw h-dvh z-0 contrast-75 grayscale">
 			<Canvas>
-				<Suspense fallback={<Loader />}>
-					<Model />
-				</Suspense>
+				<Model />
 			</Canvas>
 		</div>
-	)
+	);
 }
 
 function Model(props: GroupProps) {
@@ -47,15 +31,24 @@ function Model(props: GroupProps) {
 	useFrame((_state, delta) => {
 		if (!globeRef.current) return;
 
-		(globeRef.current.position! as Vector3).y = window.scrollY / 1500;
-		(globeRef.current.rotation! as Euler).y += (delta / 7);
-	})
+		(globeRef.current.position! as Vector3).y = -(window.scrollY / 1500);
+		(globeRef.current.rotation! as Euler).y += delta / 7;
+	});
 
 	return (
 		<>
 			<directionalLight color="grey" intensity={30} position={[15, 0, 3]} />
-			<directionalLight color='hsl(220, 25.7%, 10%)' intensity={15} position={[-30, 0, 3]} />
-			<group matrix={[0, 0, 0]} position={[0, 0, viewport.width < 5.5 ? viewport.width / 2 : 3]} {...props} dispose={null}>
+			<directionalLight
+				color="hsl(220, 25.7%, 10%)"
+				intensity={15}
+				position={[-30, 0, 3]}
+			/>
+			<group
+				{...props}
+				matrix={[0, 0, 0]}
+				position={[0, 0, viewport.width < 5.5 ? viewport.width / 2 : 3]}
+				dispose={null}
+			>
 				<group ref={globeRef}>
 					<mesh
 						castShadow
@@ -81,5 +74,5 @@ function Model(props: GroupProps) {
 				</group>
 			</group>
 		</>
-	)
+	);
 }

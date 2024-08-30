@@ -1,5 +1,5 @@
 import ProjectsData from "@/data/projects.json";
-import { Box, Container, Heading, Stack } from "@chakra-ui/react";
+import { Box, Container, Divider, Heading, Stack } from "@chakra-ui/react";
 import CardProject from "../components/cardProject";
 
 export default function Projects() {
@@ -7,11 +7,14 @@ export default function Projects() {
 
 	return (
 		<>
-			<Box position='absolute' zIndex={-1} inset="100vh 0 0" className="bg-gray-800" />
-			<Container id="projects" maxW="100%" w="100%" position='relative' zIndex={10}>
-				<Heading as="h2" w="full" fontSize={'5xl'} fontStyle="serif" marginBlock={20} >
-					Projetos Selecionados
-				</Heading>
+			<Box position="absolute" zIndex={-1} inset="100vh 0 0" className="bg-gray-800" />
+			<Container id="projects" position="relative" zIndex={10} maxW="100%" w="100%">
+				<Stack direction="row" alignItems="baseline" gap={8}>
+					<Heading as="h2" w="max-content" fontSize={{ base: '3xl', md: '5xl' }} fontStyle="serif" marginBlock={{ base: 12, lg: 20 }} >
+						Projetos Selecionados
+					</Heading>
+					<Divider flex={1} borderWidth={1} className="-translate-y-3" />
+				</Stack>
 				<Stack
 					display="grid"
 					gridTemplateColumns={{
