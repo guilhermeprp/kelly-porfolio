@@ -46,6 +46,10 @@ body.body-background {
   }
 }
 
+.w-available {
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
 
 /* NEW DATA */
 

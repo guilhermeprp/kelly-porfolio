@@ -18,9 +18,10 @@ export default function Projects() {
 				<Stack
 					display="grid"
 					gridTemplateColumns={{
-						base: autoFit("300px"),
-						sm: autoFit("450px"),
-						md: autoFit("500px"),
+						base: autoFit("275px"),
+						sm: autoFit("350px"),
+						md: autoFit("425px"),
+						lg: autoFit("500px")
 					}}
 					gap={8}
 				>
