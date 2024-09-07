@@ -24,10 +24,6 @@ export default function footer() {
 					link: "mailto: kellysoaresfernandes@gmail.com",
 				},
 				{
-					text: "+55 61 99999-9999",
-					link: "tel: +556199999999",
-				},
-				{
 					text: "Linkedin",
 					link: "https://www.linkedin.com/in/kelly-jenyfer/",
 				},
