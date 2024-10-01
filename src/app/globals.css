@@ -16,21 +16,17 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background: hsl(0, 0%, 12.5%);
+  --background-accent: hsl(217, 10%, 25%);
+  --background-accent--light: hsl(220, 26%, 26%);
+  --primary: hsl(175, 82%, 80%);
+  --text: hsl(21, 35%, 92%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background: hsl(0, 0%, 12.5%);
-    --background-accent: hsl(217, 10%, 25%);
-    --background-accent--light: hsl(220, 26%, 26%);
-    --primary: hsl(175, 82%, 80%);
-    --text: hsl(21, 35%, 92%);
-  }
-}
+@media (prefers-color-scheme: dark) {}
 
 body.body-background {
   color: var(--text);
