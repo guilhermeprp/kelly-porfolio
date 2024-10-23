@@ -1,19 +1,23 @@
 import Footer from "@/presentation/components/footer";
+import Globe from "@/presentation/components/globe";
 import LoadingView from "@/presentation/components/loadingView";
+import Banner from "@/presentation/layouts/banner";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const Dynamic = {
-  Globe: dynamic(() => import("@/presentation/components/globe"), { ssr: false }),
-  Banner: dynamic(() => import("@/presentation/layouts/banner")),
   Projects: dynamic(() => import("@/presentation/layouts/projects"), { ssr: true }),
 }
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <link rel="preload" href={process.env.HOST_NAME + '/background.jpg'} />
+      </Head>
       <LoadingView />
-      <Dynamic.Globe />
-      <Dynamic.Banner />
+      <Globe />
+      <Banner />
       <Dynamic.Projects />
       <Footer />
     </>

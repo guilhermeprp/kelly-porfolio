@@ -4,7 +4,7 @@ export default function useBannerParallax() {
 	const [scrollY, setScrollY] = useState(0);
 	const [windowHeight, setWindowHeight] = useState(1080);
 
-	const translateDown = (y: number) => `0 ${y / 4}px`;
+	const translateDown = (y: number) => `0 ${y / 3}px`;
 	const scaleDown = (y: number, limit: number) => 1 - y / limit;
 
 	useEffect(() => {

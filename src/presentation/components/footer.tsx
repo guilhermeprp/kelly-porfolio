@@ -1,54 +1,10 @@
+import { navConst, rightsConst, socialConst } from "@/data/constants";
 import { Container, Divider, Heading, Stack } from "@chakra-ui/react";
 import Link from "next/link";
 
 export default function footer() {
-	const list = [
-		{
-			id: "62d9b4e8-0595-48ff-92e2-599bda4f0d91",
-			title: "CopyRight",
-			target: "_blank",
-			content: [
-				{
-					text: "© 2024 Kelly Jenyfer",
-					link: "",
-				},
-			],
-		},
-		{
-			id: "05c0f6ba-56db-47e3-bdea-7c41e8524e50",
-			title: "Contact",
-			target: "_blank",
-			content: [
-				{
-					text: "kellysoaresfernandes@gmail.com",
-					link: "mailto: kellysoaresfernandes@gmail.com",
-				},
-				{
-					text: "Linkedin",
-					link: "https://www.linkedin.com/in/kelly-jenyfer/",
-				},
-				{
-					text: "Instagram",
-					link: "https://www.instagram.com/kellyjenyferjornalista/",
-				},
-			],
-		},
-		{
-			id: "e9c42e23-0e35-45e5-950e-06f85405e6e5",
-			title: "Menu",
-			target: "_self",
-			content: [
-				{
-					text: "Home",
-					link: "/",
-				},
-				{
-					text: "Sobre",
-					link: "/about",
-				},
-			],
-		},
-	];
+
+	const list = [rightsConst, socialConst, navConst];
 
 	return (
 		<Container
@@ -66,7 +22,7 @@ export default function footer() {
 			background="var(--background)"
 		>
 			{list.map((item) => (
-				<Stack key={item.id} flex={1}>
+				<Stack key={item.id} flex="1 1 300px">
 					<Heading as="h6">{item.title}</Heading>
 					<Divider />
 					{item.content.map((content, index) => (
