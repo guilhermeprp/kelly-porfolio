@@ -1,32 +1,5 @@
 [
   {
-    "id": "section_1a2b3c4d",
-    "section": {
-      "cards": [
-        {
-          "date": "18/04/2025",
-          "id": "card_5e6f7g8h",
-          "image": "https://www.tvcomunitariadf.com/wp-content/uploads/2025/04/IMG_6342-2048x1536.jpg",
-          "lead": "Na última sexta-feira, 11 de abril, o diretor de produção da TV Comunitária de Brasília Agostinho Reis, apresentou o programa Brasília Notícias recebendo o grupo Gavião Digital para falar sobre a história deles. O grupo está fazendo o maior sucesso atualmente na área de comunicação digital.",
-          "link": "https://www.tvcomunitariadf.com/2025/04/18/grupo-de-comunicacao-gaviao-digital-combate-fake-news-em-sao-sebastiao/",
-          "slug": "grupo-de-comunicacao-gaviao-digital-combate-fake-news-em-sao-sebastiao",
-          "title": "Grupo de comunicação Gavião Digital combate fake news em São Sebastião"
-        },
-        {
-          "date": "27/05/2025",
-          "id": "card_6i7j8k9l",
-          "image": "https://www.tvcomunitariadf.com/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-27-at-15.05.23.jpeg",
-          "lead": "Com a apresentação da jornalista Camila Piacesi na terça-feira, 20 de maio, o programa Brasília Notícias recebeu Romário Leal, presidente da AMECC; Wanderson Souza, vice-presidente da Associação Morro Azul; Damião Ferreira, presidente da Associação Amor 308; e Michael Lemes, dirigente da Associação Morada do Sol. O programa teve como tema a regularização fundiária e a moradia digna na cidade de São Sebastião.",
-          "link": "https://www.tvcomunitariadf.com/2025/05/27/regularizacao-fundiaria-e-moradia-digna-em-sao-sebastiao-voltam-a-ser-temas-de-debate-na-tvcomdf/",
-          "slug": "regularizacao-fundiaria-e-moradia-digna-em-sao-sebastiao-voltam-a-ser-temas-de-debate-na-tvcomdf",
-          "title": "Regularização fundiária e moradia digna em São Sebastião voltam a ser temas de debate na TVComDF"
-        }
-      ],
-      "slug": "brasilia-noticias",
-      "title": "Brasília Notícias"
-    }
-  },
-  {
     "id": "section_9i0j1k2l",
     "section": {
       "cards": [
@@ -164,15 +137,6 @@
           "link": "https://www.tvcomunitariadf.com/2025/05/20/o-multi-instrumentista-boreu-recebe-marcio-proenca-que-fala-de-seus-livros-musicas-e-projetos-de-vida/",
           "slug": "o-multi-instrumentista-boreu-recebe-marcio-proenca-que-fala-de-seus-livros-musicas-e-projetos-de-vida",
           "title": "O multi-instrumentista Boréu recebe Márcio Proença, que fala de seus livros, músicas e projetos de vida"
-        },
-        {
-          "date": "23/05/2025",
-          "id": "card_5m6n7o8p",
-          "image": "https://www.tvcomunitariadf.com/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-23-at-12.31.12.jpeg",
-          "lead": "No programa Viva a Arte de quinta-feira (15/05), o multi-instrumentista Boréu recebeu o músico Edmilson Figueiredo para compartilhar com os telespectadores sua trajetória na música, na literatura, no audiovisual e na cultura popular. Este programa é uma parceria da TV Comunitária com a Secretaria de Cultura e Economia Criativa e faz parte da 5ª edição do projeto Brasília Mostra Sua Cara e Cultura.",
-          "link": "https://www.tvcomunitariadf.com/2025/05/23/musica-literatura-audiovisual-e-cultura-popular-sao-temas-discutidos-na-17a-edicao-do-viva-a-arte/",
-          "slug": "musica-literatura-audiovisual-e-cultura-popular-sao-temas-discutidos-na-17a-edicao-do-viva-a-arte",
-          "title": "Música, literatura, audiovisual e cultura popular são temas discutidos na 17ª edição do Viva a Arte"
         }
       ],
       "slug": "viva-a-arte",
